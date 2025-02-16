@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>four sorting algorithms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            align-items: center;
+            width: 100%;
+        }
+
+        .algorithm {
+            flex-direction: column;
+            display: flex;
+        }
+
+        .algorithm h2, .algorithm p {
+            text-align: left;
+            align-self: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .sort {
+            margin: 0 auto;
+            background-color: #f8f8f8;
+            width: 350x;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Insertion Sort Section -->
+        <div id="insertion-sort" class="algorithm">
+            <h2>Insertion Sort</h2>
+            <p>
+                Insertion sort is a simple sorting algorithm that builds the sorted
+                array one item at a time. It is much like sorting playing cards in
+                your hands.
+            </p>
+            <div class="sort">
+                <pre><code class="language-javascript">// Insertion Sort Implementation
+function insertionSort(arr) {
+    for (let i = 1; i &lt; arr.length; i++) {
+        let key = arr[i];
+        let j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+    return arr;
+}
+            </div>
+        </div>
+    </main>
+
+        <footer>
+                <p>&copy; 2025 hwalz</p>
+        </footer>
+    </body>
+</html>
